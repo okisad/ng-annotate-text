@@ -166,7 +166,7 @@ ngAnnotateText.factory "NGAnnotation", ->
 			id: annotationIdCounter++,
 			startIndex: null
 			endIndex: null
-			data: {points: 0}
+			data: {}
 			type: ""
 			children: []
 
@@ -376,8 +376,8 @@ ngAnnotateText.directive "ngAnnotateText", ($rootScope, $compile, $http, $q, $co
 			annotation = getAnnotationById $scope.annotations, targetId
 
 			# We don't want to show the tooltip if a popup with the annotation is open,
-			# or if the tooltip has both no comment and points
-			if activePopup? or (not annotation.data.comment and not annotation.data.points)
+			# or if the tooltip has both no comment
+			if activePopup? or (not annotation.data.comment)
 				return
 
 			tooltip = new NGAnnotateTextPopup

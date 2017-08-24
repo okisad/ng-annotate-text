@@ -219,9 +219,7 @@
         id: annotationIdCounter++,
         startIndex: null,
         endIndex: null,
-        data: {
-          points: 0
-        },
+        data: {},
         type: "",
         children: []
       });
@@ -444,7 +442,7 @@
             return;
           }
           annotation = getAnnotationById($scope.annotations, targetId);
-          if ((activePopup != null) || (!annotation.data.comment && !annotation.data.points)) {
+          if ((activePopup != null) || (!annotation.data.comment)) {
             return;
           }
           tooltip = new NGAnnotateTextPopup({
