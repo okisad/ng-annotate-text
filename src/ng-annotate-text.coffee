@@ -175,7 +175,7 @@ ngAnnotateText.factory "NGAnnotation", ->
 
 	return Annotation
 
-ngAnnotateText.directive "ngAnnotateText", ($rootScope, $compile, $http, $q, $controller, $sce, NGAnnotation, NGAnnotateTextPopup)->
+ngAnnotateText.directive "ngAnnotateText", ($rootScope, $compile, $http, $q, $controller, $sce, NGAnnotation, NGAnnotateTextPopup, $templateRequest)->
 	restrict: "E"
 	scope:
 		text: "="
@@ -242,12 +242,12 @@ ngAnnotateText.directive "ngAnnotateText", ($rootScope, $compile, $http, $q, $co
 		$scope.$on "ngAnnotateText.clearPopups", clearPopups
 
 		if $scope.popupTemplateUrl
-			$http.get($scope.popupTemplateUrl).then (response)->
-				popupTemplateData = response.data
+			$templateRequest($scope.popupTemplateUrl).then (response)->
+				popupTemplateData = response
 
 		if $scope.tooltipTemplateUrl
-			$http.get($scope.tooltipTemplateUrl).then (response)->
-				tooltipTemplateData = response.data
+			$templateRequest($scope.tooltipTemplateUrl).then (response)->
+				tooltipTemplateData = response
 
 		removeChildren = (annotation)->
 			for i in [annotation.children.length - 1..0] by -1

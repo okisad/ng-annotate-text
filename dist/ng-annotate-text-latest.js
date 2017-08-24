@@ -232,7 +232,7 @@
     return Annotation;
   });
 
-  ngAnnotateText.directive("ngAnnotateText", function($rootScope, $compile, $http, $q, $controller, $sce, NGAnnotation, NGAnnotateTextPopup) {
+  ngAnnotateText.directive("ngAnnotateText", function($rootScope, $compile, $http, $q, $controller, $sce, NGAnnotation, NGAnnotateTextPopup, $templateRequest) {
     return {
       restrict: "E",
       scope: {
@@ -306,13 +306,13 @@
         $scope.$on("$destroy", clearPopups);
         $scope.$on("ngAnnotateText.clearPopups", clearPopups);
         if ($scope.popupTemplateUrl) {
-          $http.get($scope.popupTemplateUrl).then(function(response) {
-            return popupTemplateData = response.data;
+          $templateRequest($scope.popupTemplateUrl).then(function(response) {
+            return popupTemplateData = response;
           });
         }
         if ($scope.tooltipTemplateUrl) {
-          $http.get($scope.tooltipTemplateUrl).then(function(response) {
-            return tooltipTemplateData = response.data;
+          $templateRequest($scope.tooltipTemplateUrl).then(function(response) {
+            return tooltipTemplateData = response;
           });
         }
         removeChildren = function(annotation) {
