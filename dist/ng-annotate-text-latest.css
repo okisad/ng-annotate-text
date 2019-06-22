@@ -1,37 +1,37 @@
 .ng-annotate-text-type- {
   border-bottom: 1px solid #000; }
 .ng-annotate-text-type-red {
-  color: #fff;
-  background: #d32f2f;
-  border-color: #d32f2f; }
-.ng-annotate-text-type-green {
-  color: #fff;
-  background: #388e3c;
-  border-color: #388e3c; }
-.ng-annotate-text-type-brown {
-  color: #fff;
-  background: #5d4037;
-  border-color: #5d4037; }
-.ng-annotate-text-type-blurgrey {
-  color: #fff;
-  background: #455a64;
-  border-color: #455a64; }
-.ng-annotate-text-type-orange {
-  color: #fff;
-  background: #e64a19;
-  border-color: #e64a19; }
-.ng-annotate-text-type-purple {
-  color: #fff;
-  background: #7b1fa2;
-  border-color: #7b1fa2; }
-.ng-annotate-text-type-cyan {
-  color: #fff;
-  background: #0097a7;
-  border-color: #0097a7; }
-.ng-annotate-text-type-indigo {
-  color: #fff;
-  background: #303f9f;
-  border-color: #303f9f; }
+    color: #fff;
+    background: #303f9f;
+    border-color: #303f9f; }
+  .ng-annotate-text-type-green {
+    color: #fff;
+    background: #e64a19;;
+    border-color: #e64a19;; }
+  .ng-annotate-text-type-brown {
+    color: #fff;
+    background: #5d4037;
+    border-color: #5d4037; }
+  .ng-annotate-text-type-blurgrey {
+    color: #fff;
+    background: #455a64;
+    border-color: #455a64; }
+  .ng-annotate-text-type-orange {
+    color: #fff;
+    background: #FF00FF;
+    border-color: #FF00FF; }
+  .ng-annotate-text-type-purple {
+    color: #fff;
+    background: #7b1fa2;
+    border-color: #7b1fa2; }
+  .ng-annotate-text-type-cyan {
+    color: #fff;
+    background: #0097a7;
+    border-color: #0097a7; }
+  .ng-annotate-text-type-indigo {
+    color: #fff;
+    background: #0000FF;
+    border-color: #0000FF; }
 .ng-annotate-text-type-strike {
   text-decoration: line-through; }
 .ng-annotate-text-annotation {
